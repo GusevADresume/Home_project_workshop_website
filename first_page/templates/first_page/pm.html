@@ -1,0 +1,16 @@
+{% extends 'first_page/base.html'%}
+
+
+{% block content %}
+
+{% for info in content %}
+
+<table id="tb1">
+<td>
+<tr><h3 align="center"; ><font size="10", color="LightGray", face="Georgia">{{info.title}}</font></h3></tr>
+<tr><h6 align="center";><font size="6", color="LightGray", face="Georgia">{{info.text}}</font></h6></tr>
+<tr><p align="center"><img  src="{{info.img.url}}" width="500" height="300" ></p></tr>
+    {% endfor %}
+</td>
+   </table>
+    {% endblock %}

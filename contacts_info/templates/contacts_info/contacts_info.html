@@ -1,0 +1,22 @@
+{% extends 'first_page/base.html'%}
+
+
+{% block content %}
+
+{% for contact in contacts %}
+ <h3 align="center"; ><font size="10", color="LightGray", face="Georgia"> {{contact.title}} </font></h3>
+ <h3 align="center"; ><font size="10", color="LightGray", face="Georgia">{{contact.addres}}</font></h3>
+{% endfor %}
+
+{% for i in info %}
+<h3 align="center",><font color="LightGray", face="Georgia">{{i.desc}}</font></h3>
+<h3 align="center",><font color="LightGray", face="Georgia">{{i.name}}</font></h3>
+<h3 align="center",><font color="LightGray", face="Georgia">{{i.phone}}</font></h3>
+{% endfor %}
+<table>
+ <tr>
+ <td align="center"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa62826ce7c59dabc02946a2cd9392c711d2ffef16ef70d372ce2f709da50792d&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script></td>
+</tr>
+</table>
+ {% endblock %}
+

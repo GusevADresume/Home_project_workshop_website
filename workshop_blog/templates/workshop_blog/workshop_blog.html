@@ -1,0 +1,25 @@
+{% extends 'first_page/base.html'%}
+
+
+{% block content %}
+
+{% for p in page %}
+<h5 align="center"; ><font size="6", color="LightGray", face="Georgia">{{ p.text }}</font></h5>
+<table width="100%">
+{% if page.has_previous %}
+    <tr>
+   <td><a href="?page={{page.previous_page_number}}"><img src="/static/images/left_botton.png" width="50" height="100"/></a></td>
+{% endif %}
+{% if page.has_next %}
+<td><h5 align="right"; ><a href="?page={{page.next_page_number}}"><img src="/static/images/right_botton.png" width="50" height="100"/></a></h5></td>
+{% endif %}
+</tr>
+</table>
+
+{% for photo in photos %}
+
+    <div align="center"; ><img  src="{{photo.img.url}}"></div>
+
+{% endfor %}
+{% endfor %}
+{% endblock %}
